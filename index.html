@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sounds Player</title>
+    <meta name="title" contetn="Sounds Player" />
+    <meta name="description" content="A web Sounds Player" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+    />
+
+    <!-- MATERIAL ICONS -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,-25"
+    />
+
+    <!-- CUSTOME CSS FILE -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="">
+    <!-- HEADER -->
+    <header class="header d-flex">
+      <div class="logo d-flex">
+        <span class="material-symbols-rounded">graphic_eq</span>
+        <h1 class="title-lg">Sounds Player</h1>
+      </div>
+      <div class="show__sounds">
+        <button class="btn" data-toggle-playlist>
+          <span class="material-symbols-rounded">queue_music</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <article class="article">
+        <div class="player d-flex">
+          <div class="container">
+            <figure class="sound__cover">
+              <img
+                src="./assets/images/poster-1.jpg"
+                alt="Sounds Images"
+                width="800"
+                height="800"
+                class="img"
+              />
+            </figure>
+            <div class="content">
+              <h2 class="headline-sm">Happy Moments (Master)</h2>
+
+              <p class="label-lg info d-flex">
+                <span class="album">No Spirit</span>
+                <span class="year">2023</span>
+              </p>
+
+              <p class="label-md artist">No Spirit x Tonion</p>
+
+              <div class="control">
+                <div>
+                  <div class="range__control">
+                    <input
+                      type="range"
+                      class="range"
+                      step="1"
+                      value="0"
+                      max="60"
+                      data-range
+                    />
+
+                    <div class="range-pour" data-range-pour></div>
+                  </div>
+
+                  <div class="duration d-flex">
+                    <span class="label-md" data-time>0:00</span>
+                    <span class="label-md sound__long">1:00</span>
+                  </div>
+                </div>
+                <div class="volume">
+                  <button class="btn">
+                    <span class="material-symbols-rounded">volume_up</span>
+                  </button>
+                  <div class="range__control">
+                    <input
+                      type="range"
+                      class="range"
+                      value="1"
+                      step="0.05"
+                      max="1"
+                      data-range
+                    />
+                    <div class="range-pour" data-range-pour></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="advance__control d-flex">
+                <button class="btn toggle" data-repeat>
+                  <span class="material-symbols-rounded icon-default"
+                    >repeat</span
+                  >
+                  <span class="material-symbols-rounded icon-active"
+                    >repeat_one</span
+                  >
+                </button>
+
+                <button class="btn" data-skip-prev>
+                  <span class="material-symbols-rounded" data-skip-prev
+                    >skip_previous</span
+                  >
+                </button>
+
+                <button class="btn play" data-on-paly>
+                  <span class="material-symbols-rounded icon-default"
+                    >play_arrow</span
+                  >
+                  <span class="material-symbols-rounded icon-active"
+                    >pause</span
+                  >
+                </button>
+
+                <button class="btn" data-skip-next>
+                  <span class="material-symbols-rounded">skip_next</span>
+                </button>
+
+                <button class="btn" data-shuffle>
+                  <span class="material-symbols-rounded">shuffle</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playlist">
+          <ul class="sounds-list"></ul>
+        </div>
+        <div class="overlay" data-toggle-playlist></div>
+      </article>
+    </main>
+    <!-- COSTUM JS FILE -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
